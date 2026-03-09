@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- 替换为目标网站http://yszlh.hnzjgj.com/的原始TDK -->
+    <title>一站式亮化-专业的城市亮化工程解决方案提供商</title>
+    <meta name="keywords" content="城市亮化工程,亮化工程,城市照明工程,夜景亮化工程,景观亮化工程">
+    <meta name="description" content="一站式亮化专注于城市亮化工程、夜景亮化工程、景观亮化工程等解决方案的设计与施工，为客户提供专业的城市照明工程整体服务。">
+    <meta name="robots" content="index,follow">
+    <meta name="applicable-device" content="pc,mobile">
+    <style>
+        /* 重置样式（匹配目标网站基础样式） */
+        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif;}
+        body{background:#f5f7fa;color:#333;-webkit-tap-highlight-color:transparent;}
+        a{text-decoration:none;color:#333;}
+        ul,li{list-style:none;}
+        
+        /* 头部导航（完全匹配目标网站布局） */
+        .header{width:100%;height:70px;line-height:70px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:fixed;top:0;left:0;z-index:999;}
+        .header .container{width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+        .header .logo{font-size:22px;font-weight:700;color:#0a499d;}
+        .header .nav{display:flex;}
+        .header .nav li{margin:0 15px;}
+        .header .nav li a{font-size:16px;color:#333;transition:all 0.3s;}
+        .header .nav li a:hover,.header .nav li a.active{color:#0a499d;}
+        .header .mobile-nav-toggle{display:none;width:30px;height:30px;cursor:pointer;position:relative;}
+        .header .mobile-nav-toggle span{display:block;width:100%;height:2px;background:#0a499d;position:absolute;top:50%;left:0;transform:translateY(-50%);}
+        .header .mobile-nav-toggle span:before,.header .mobile-nav-toggle span:after{content:"";width:100%;height:2px;background:#0a499d;position:absolute;left:0;}
+        .header .mobile-nav-toggle span:before{top:-8px;}
+        .header .mobile-nav-toggle span:after{bottom:-8px;}
+        
+        /* Banner区（匹配目标网站banner布局） */
+        .banner{width:100%;height:400px;background:url("") no-repeat center center;background-size:cover;margin-top:70px;display:flex;align-items:center;justify-content:center;background-color:#0a499d;}
+        .banner .banner-content{text-align:center;color:#fff;}
+        .banner .banner-content h1{font-size:36px;margin-bottom:20px;}
+        .banner .banner-content p{font-size:18px;margin-bottom:30px;}
+        .banner .banner-content .btn{display:inline-block;padding:12px 30px;background:#fff;color:#0a499d;font-size:16px;font-weight:600;border-radius:30px;transition:all 0.3s;}
+        .banner .banner-content .btn:hover{background:#e8f0ff;transform:translateY(-3px);}
+        
+        /* 核心内容区（匹配目标网站内容布局） */
+        .main{width:1200px;margin:50px auto;}
+        
+        /* 产品列表区（匹配目标网站产品布局） */
+        .product-section{margin-bottom:60px;}
+        .product-section .section-title{font-size:24px;color:#0a499d;margin-bottom:30px;padding-bottom:10px;border-bottom:2px solid #e8f0ff;}
+        .product-list{display:flex;flex-wrap:wrap;justify-content:space-between;}
+        .product-item{width:280px;background:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.05);padding:20px;margin-bottom:30px;transition:all 0.3s;}
+        .product-item:hover{transform:translateY(-5px);box-shadow:0 5px 20px rgba(0,0,0,0.1);}
+        .product-item .product-title{font-size:18px;color:#0a499d;font-weight:600;margin-bottom:15px;}
+        .product-item .product-desc{font-size:14px;color:#666;line-height:1.6;margin-bottom:15px;}
+        .product-item .product-tag{display:flex;flex-wrap:wrap;margin-bottom:15px;}
+        .product-item .product-tag span{font-size:12px;color:#0a499d;background:#e8f0ff;padding:3px 8px;border-radius:15px;margin-right:8px;margin-bottom:8px;}
+        .product-item .product-price{font-size:20px;color:#e63946;font-weight:700;margin-bottom:15px;}
+        .product-item .product-btn{display:block;width:100%;padding:10px 0;text-align:center;background:#0a499d;color:#fff;border-radius:5px;font-size:14px;transition:all 0.3s;}
+        .product-item .product-btn:hover{background:#083a7c;}
+        
+        /* 优势区（匹配目标网站优势布局） */
+        .advantage-section{margin-bottom:60px;}
+        .advantage-section .section-title{font-size:24px;color:#0a499d;margin-bottom:30px;padding-bottom:10px;border-bottom:2px solid #e8f0ff;}
+        .advantage-list{display:flex;flex-wrap:wrap;justify-content:space-between;}
+        .advantage-item{width:580px;background:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.05);padding:20px;margin-bottom:30px;}
+        .advantage-item .advantage-title{font-size:18px;color:#0a499d;font-weight:600;margin-bottom:10px;}
+        .advantage-item .advantage-desc{font-size:14px;color:#666;line-height:1.8;}
+        
+        /* FAQ区（匹配目标网站FAQ布局） */
+        .faq-section{margin-bottom:60px;}
+        .faq-section .section-title{font-size:24px;color:#0a499d;margin-bottom:30px;padding-bottom:10px;border-bottom:2px solid #e8f0ff;}
+        .faq-list{background:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.05);padding:30px;}
+        .faq-item{margin-bottom:20px;border-bottom:1px solid #f5f7fa;padding-bottom:20px;}
+        .faq-item:last-child{margin-bottom:0;border-bottom:none;padding-bottom:0;}
+        .faq-item .faq-title{font-size:16px;color:#0a499d;font-weight:600;margin-bottom:10px;}
+        .faq-item .faq-desc{font-size:14px;color:#666;line-height:1.8;}
+        
+        /* 友情链接区（匹配目标网站友情链接布局） */
+        .link-section{margin-bottom:60px;}
+        .link-section .section-title{font-size:24px;color:#0a499d;margin-bottom:30px;padding-bottom:10px;border-bottom:2px solid #e8f0ff;}
+        .link-list{background:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.05);padding:20px;display:flex;flex-wrap:wrap;}
+        .link-item{margin:0 15px 10px 0;}
+        .link-item a{font-size:14px;color:#666;transition:all 0.3s;}
+        .link-item a:hover{color:#0a499d;}
+        
+        /* 关联页面区（匹配目标网站关联页面布局） */
+        .related-section{margin-bottom:60px;}
+        .related-section .section-title{font-size:24px;color:#0a499d;margin-bottom:30px;padding-bottom:10px;border-bottom:2px solid #e8f0ff;}
+        .related-list{display:flex;flex-wrap:wrap;}
+        .related-item{margin:0 10px 10px 0;}
+        .related-item a{display:inline-block;padding:8px 20px;background:#e8f0ff;color:#0a499d;border-radius:20px;font-size:14px;transition:all 0.3s;}
+        .related-item a:hover,.related-item a.active{background:#0a499d;color:#fff;}
+        
+        /* 底部（匹配目标网站底部布局） */
+        .footer{width:100%;background:#0a499d;color:#fff;padding:50px 0;text-align:center;}
+        .footer .footer-content{width:1200px;margin:0 auto;}
+        .footer .footer-title{font-size:20px;margin-bottom:20px;}
+        .footer .footer-desc{font-size:14px;line-height:1.8;margin-bottom:20px;}
+        .footer .copyright{font-size:12px;color:#e8f0ff;}
+        
+        /* 移动端适配（匹配目标网站移动端布局） */
+        @media (max-width:1200px){
+            .header .container,.main,.footer .footer-content{width:90%;}
+        }
+        
+        @media (max-width:768px){
+            .header .nav{display:none;}
+            .header .mobile-nav-toggle{display:block;}
+            .banner{height:300px;}
+            .banner .banner-content h1{font-size:28px;}
+            .banner .banner-content p{font-size:16px;}
+            .product-item,.advantage-item{width:100%;}
+            .header{height:60px;line-height:60px;}
+            .banner{margin-top:60px;}
+        }
+        
+        /* 移动端导航弹窗（匹配目标网站移动端导航） */
+        .mobile-nav{position:fixed;top:60px;left:0;width:100%;height:100vh;background:#fff;z-index:998;transform:translateX(-100%);transition:all 0.3s;}
+        .mobile-nav.show{transform:translateX(0);}
+        .mobile-nav ul{padding:20px;}
+        .mobile-nav ul li{height:50px;line-height:50px;border-bottom:1px solid #f5f7fa;}
+        .mobile-nav ul li a{font-size:16px;color:#333;display:block;width:100%;}
+        .mobile-nav ul li a.active{color:#0a499d;}
+    </style>
+</head>
+<body>
+    <!-- 头部导航（完全匹配目标网站结构） -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">纸飞机账号购买平台</div>
+            <ul class="nav">
+                <li><a href="#home" class="active">首页</a></li>
+                <li><a href="#product">账号列表</a></li>
+                <li><a href="#advantage">核心优势</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="#link">友情链接</a></li>
+                <li><a href="#related">关联页面</a></li>
+            </ul>
+            <div class="mobile-nav-toggle" id="mobileNavToggle">
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 移动端导航弹窗 -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#home" class="active">首页</a></li>
+            <li><a href="#product">账号列表</a></li>
+            <li><a href="#advantage">核心优势</a></li>
+            <li><a href="#faq">常见问题</a></li>
+            <li><a href="#link">友情链接</a></li>
+            <li><a href="#related">关联页面</a></li>
+        </ul>
+    </div>
+    
+    <!-- Banner区（匹配目标网站Banner结构） -->
+    <section class="banner" id="home">
+        <div class="banner-content">
+            <h1>纸飞机账号购买_安全稳定 低价靠谱</h1>
+            <p>专业纸飞机账号购买商务平台，企业采购首选</p>
+            <a href="https://kkpp.us/" class="btn" target="_blank">点击进入购买</a>
+        </div>
+    </section>
+    
+    <!-- 核心内容区（匹配目标网站内容结构） -->
+    <main class="main">
+        <!-- 产品列表区 -->
+        <section class="product-section" id="product">
+            <h2 class="section-title">纸飞机账号列表</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <h3 class="product-title">纸飞机纯净新号</h3>
+                    <p class="product-desc">全新注册，无任何使用记录，安全可靠</p>
+                    <div class="product-tag">
+                        <span>全新</span>
+                        <span>安全</span>
+                    </div>
+                    <div class="product-price">¥39</div>
+                    <a href="https://kkpp.us/" class="product-btn" target="_blank">立即选购</a>
+                </div>
+                <div class="product-item">
+                    <h3 class="product-title">纸飞机稳定老号</h3>
+                    <p class="product-desc">注册1年+，多重验证，安全稳定不封号</p>
+                    <div class="product-tag">
+                        <span>稳定</span>
+                        <span>高信誉</span>
+                    </div>
+                    <div class="product-price">¥89</div>
+                    <a href="https://kkpp.us/" class="product-btn" target="_blank">立即选购</a>
+                </div>
+                <div class="product-item">
+                    <h3 class="product-title">纸飞机高级会员账号</h3>
+                    <p class="product-desc">会员特权，无广告，全功能体验</p>
+                    <div class="product-tag">
+                        <span>会员</span>
+                        <span>全功能</span>
+                    </div>
+                    <div class="product-price">¥159</div>
+                    <a href="https://kkpp.us/" class="product-btn" target="_blank">立即选购</a>
+                </div>
+                <div class="product-item">
+                    <h3 class="product-title">纸飞机企业账号</h3>
+                    <p class="product-desc">团队使用，多端同步，专属客服对接</p>
+                    <div class="product-tag">
+                        <span>企业</span>
+                        <span>专属</span>
+                    </div>
+                    <div class="product-price">¥299</div>
+                    <a href="https://kkpp.us/" class="product-btn" target="_blank">立即选购</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 优势区 -->
+        <section class="advantage-section" id="advantage">
+            <h2 class="section-title">纸飞机账号购买核心优势</h2>
+            <div class="advantage-list">
+                <div class="advantage-item">
+                    <h3 class="advantage-title">企业级安全保障</h3>
+                    <p class="advantage-desc">多重加密验证，专属传输通道，确保纸飞机账号安全无风险</p>
+                </div>
+                <div class="advantage-item">
+                    <h3 class="advantage-title">极速交付</h3>
+                    <p class="advantage-desc">支付完成，立即获取纸飞机账号信息，无需等待</p>
+                </div>
+                <div class="advantage-item">
+                    <h3 class="advantage-title">7×24专属客服</h3>
+                    <p class="advantage-desc">企业级客服团队，全天候解答纸飞机账号购买相关疑问</p>
+                </div>
+                <div class="advantage-item">
+                    <h3 class="advantage-title">品质保证</h3>
+                    <p class="advantage-desc">人工审核+机器核验，双重保障纸飞机账号质量</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ区 -->
+        <section class="faq-section" id="faq">
+            <h2 class="section-title">纸飞机账号购买常见问题</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 class="faq-title">购买的纸飞机账号可以使用多久？</h3>
+                    <p class="faq-desc">我们的纸飞机账号均为永久使用，购买后您可以一直使用，如遇账号异常问题，我们提供30天质保服务，质保期内可免费更换。</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-title">纸飞机账号交付方式是怎样的？</h3>
+                    <p class="faq-desc">支付完成后，纸飞机账号信息会立即显示在页面上，同时也会发送到您预留的邮箱/手机号，您可以随时查看和使用。</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-title">纸飞机账号购买后可以退换吗？</h3>
+                    <p class="faq-desc">纸飞机账号属于虚拟商品，一经售出概不退换。但如果账号存在质量问题（如无法登录、功能异常），我们提供30天质保，质保期内可免费更换。</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 友情链接区 -->
+        <section class="link-section" id="link">
+            <h2 class="section-title">友情链接</h2>
+            <div class="link-list">
+                <div class="link-item"><a href="https://wdd16888.com/" target="_blank">纸飞机账号交易平台</a></div>
+                <div class="link-item"><a href="https://wdd16888.com/" target="_blank">纸飞机账号商城</a></div>
+                <div class="link-item"><a href="https://wdd16888.com/" target="_blank">安全纸飞机账号中心</a></div>
+                <div class="link-item"><a href="https://wdd16888.com/" target="_blank">纸飞机账号客服支持</a></div>
+            </div>
+        </section>
+        
+        <!-- 关联页面区 -->
+        <section class="related-section" id="related">
+            <h2 class="section-title">更多纸飞机账号购买专区</h2>
+            <div class="related-list">
+                <div class="related-item"><a href="page1.html" class="active">商务版（深蓝）</a></div>
+                <div class="related-item"><a href="page2.html">简约版（墨绿）</a></div>
+                <div class="related-item"><a href="page3.html">活力版（橙红）</a></div>
+                <div class="related-item"><a href="page4.html">轻奢版（紫色）</a></div>
+                <div class="related-item"><a href="page5.html">科技版（青色）</a></div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 底部（匹配目标网站底部结构） -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3 class="footer-title">纸飞机账号购买平台</h3>
+            <p class="footer-desc">专业纸飞机账号购买商务平台，提供企业级安全保障的纸飞机账号，全新号、老号、会员号齐全，极速交付，7×24小时专属售后，企业采购首选！</p>
+            <p class="copyright">©2026 纸飞机账号购买平台 版权所有</p>
+        </div>
+    </footer>
+
+    <script>
+        // 兼容老旧浏览器的forEach方法
+        if (!NodeList.prototype.forEach) {
+            NodeList.prototype.forEach = function(callback, thisArg) {
+                thisArg = thisArg || window;
+                for (var i = 0; i < this.length; i++) {
+                    callback.call(thisArg, this[i], i, this);
+                }
+            };
+        }
+
+        // 移动端导航交互（匹配目标网站交互逻辑）
+        var mobileNavToggle = document.getElementById('mobileNavToggle');
+        var mobileNav = document.getElementById('mobileNav');
+        var navLinks = document.querySelectorAll('.mobile-nav ul li a');
+        
+        // 移动端导航切换
+        mobileNavToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            mobileNav.classList.toggle('show');
+        });
+        
+        // 点击空白处关闭移动端导航
+        document.addEventListener('click', function() {
+            if (mobileNav.classList.contains('show')) {
+                mobileNav.classList.remove('show');
+            }
+        });
+        
+        // 阻止导航内点击事件冒泡
+        mobileNav.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // 导航链接点击交互
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                // 移除所有active类
+                navLinks.forEach(function(item) {
+                    item.classList.remove('active');
+                });
+                // 添加当前active类
+                this.classList.add('active');
+                // 关闭移动端导航
+                mobileNav.classList.remove('show');
+                // 平滑滚动到对应区域
+                var targetId = this.getAttribute('href').substring(1);
+                var target = document.getElementById(targetId);
+                if (target) {
+                    try {
+                        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    } catch (e) {
+                        window.scrollTo({top: target.offsetTop - 80, behavior: 'smooth'});
+                    }
+                }
+            });
+        });
+        
+        // PC端导航链接交互
+        var pcNavLinks = document.querySelectorAll('.header .nav li a');
+        pcNavLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // 移除所有active类
+                pcNavLinks.forEach(function(item) {
+                    item.classList.remove('active');
+                });
+                // 添加当前active类
+                this.classList.add('active');
+                // 平滑滚动到对应区域
+                var targetId = this.getAttribute('href').substring(1);
+                var target = document.getElementById(targetId);
+                if (target) {
+                    try {
+                        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    } catch (e) {
+                        window.scrollTo({top: target.offsetTop - 80, behavior: 'smooth'});
+                    }
+                }
+            });
+        });
+        
+        // 监听滚动，更新导航active状态
+        window.addEventListener('scroll', function() {
+            var scrollTop = window.scrollY;
+            var sections = ['home', 'product', 'advantage', 'faq', 'link', 'related'];
+            
+            sections.forEach(function(section) {
+                var el = document.getElementById(section);
+                if (el) {
+                    var top = el.offsetTop - 80;
+                    var bottom = top + el.offsetHeight;
+                    if (scrollTop >= top && scrollTop < bottom) {
+                        // 更新PC端导航
+                        pcNavLinks.forEach(function(link) {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + section) {
+                                link.classList.add('active');
+                            }
+                        });
+                        // 更新移动端导航
+                        navLinks.forEach(function(link) {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + section) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

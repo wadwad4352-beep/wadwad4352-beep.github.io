@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>纸飞机账号购买_安全稳定纸飞机账号_低价纸飞机账号交易平台-简约版</title>
+    <meta name="keywords" content="纸飞机账号购买,纸飞机账号,纸飞机账号交易,安全纸飞机账号,稳定纸飞机账号,低价纸飞机账号">
+    <meta name="description" content="极简风格纸飞机账号购买平台，提供安全稳定、低价靠谱的纸飞机账号交易服务，全新纸飞机账号、老号、会员号齐全，极速交付！">
+    <meta name="robots" content="index,follow">
+    <meta name="applicable-device" content="pc,mobile">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
+        :root{
+            --main-color:#1e7d54;/* 墨绿主色 */
+            --light-color:#e6f7ef;/* 浅绿辅助色 */
+            --text-gray:#555;--white:#fff;
+            --shadow:0 2px 8px rgba(30,125,84,0.1);
+            --highlight-color:#28a745;/* 醒目按钮色 */
+            scroll-behavior:smooth;
+        }
+        body{background:var(--light-color);color:#333;-webkit-tap-highlight-color:transparent}
+        .container{display:flex;min-height:100vh;gap:20px;/* 增加间距 */}
+        .nav-toggle{display:none;position:fixed;top:15px;right:15px;width:40px;height:40px;background:#fff;border-radius:50%;/* 圆形按钮 */box-shadow:var(--shadow);z-index:1001;align-items:center;justify-content:center}
+        .nav-toggle span{display:block;width:24px;height:2px;background:var(--main-color);position:relative}
+        .nav-toggle span:before,.nav-toggle span:after{content:"";position:absolute;width:24px;height:2px;background:var(--main-color);left:0}
+        .nav-toggle span:before{top:-8px}
+        .nav-toggle span:after{bottom:-8px}
+        .sidebar{width:200px;/* 宽度缩小 */background:var(--main-color);/* 侧边栏纯色 */box-shadow:var(--shadow);position:sticky;top:0;padding:40px 20px;flex:0 0 200px;display:flex;flex-direction:column;gap:60px;z-index:1000;color:white}
+        .sidebar .title{font-size:20px;font-weight:700;color:white;text-align:center;border-bottom:2px solid var(--light-color);padding-bottom:15px}
+        .sidebar .nav-list{list-style:none;display:flex;flex-direction:column;gap:25px}
+        .sidebar .nav-list li{padding:12px 15px;border-radius:8px;cursor:pointer;transition:.3s}
+        .sidebar .nav-list li.active,.sidebar .nav-list li:hover{background:var(--light-color);color:var(--main-color);font-weight:500}
+        .main-content{flex:1;padding:50px 60px;/* 内边距减小 */overflow-y:auto}
+        .page-desc,.account-list,.core-advantage,.faq,.friend-link,.related-pages{scroll-margin-top:20px}
+        
+        /* 醒目购买按钮 */
+        .highlight-buy-btn-wrap{
+            width:100%;margin:40px 0 60px 0;
+            display:flex;justify-content:center;align-items:center;
+            padding:20px 0;
+            background:rgba(40, 167, 69, 0.05);
+            border-radius:0;/* 直角 */
+            border:2px solid var(--highlight-color);
+        }
+        .highlight-buy-btn{
+            display:inline-block;padding:18px 50px;
+            background:var(--highlight-color);color:white;
+            font-size:22px;font-weight:700;border-radius:8px;/* 小圆角 */
+            text-decoration:none;box-shadow:0 4px 12px rgba(40, 167, 69, 0.4);
+            transition:all 0.3s ease;position:relative;overflow:hidden;
+        }
+        .highlight-buy-btn:hover{
+            background:#218838;transform:scale(1.05);/* 缩放效果 */
+            box-shadow:0 6px 18px rgba(40, 167, 69, 0.6);
+        }
+        .highlight-buy-btn:after{content:"✓";position:absolute;right:30px;top:50%;transform:translateY(-50%);font-size:18px;transition:all 0.3s ease;}
+        .highlight-buy-btn:hover:after{right:25px;}
+
+        .page-desc{margin-bottom:60px}
+        .page-desc h2{font-size:28px;color:var(--main-color);margin-bottom:15px;font-weight:600;/* 字重降低 */}
+        .page-desc p{font-size:16px;color:var(--text-gray);line-height:1.8}
+        .section-title{font-size:22px;margin-bottom:30px;padding-left:10px;border-bottom:2px solid var(--main-color);/* 底部边框 */border-left:none}
+        .account-list{margin-bottom:80px}
+        .scroll-box{display:flex;overflow-x:auto;gap:25px;padding-bottom:20px;scrollbar-width:none;-ms-overflow-style:none}
+        .scroll-box::-webkit-scrollbar{display:none}
+        .account-card{
+            flex:0 0 270px;background:var(--white);
+            border-radius:8px;/* 小圆角 */
+            box-shadow:var(--shadow);padding:25px 20px;
+            display:flex;flex-direction:column;gap:15px;
+        }
+        .account-card .card-title{font-size:18px;font-weight:700;color:var(--main-color)}
+        .account-card .card-desc{font-size:14px;color:var(--text-gray);line-height:1.6}
+        .account-card .card-tag{display:flex;gap:8px}
+        .account-card .card-tag span{font-size:12px;padding:3px 8px;background:var(--light-color);color:var(--main-color);border-radius:4px;/* 小圆角 */}
+        .account-card .card-price{font-size:22px;font-weight:700;color:var(--main-color)}
+        .buy-btn{width:100%;padding:10px 0;background:var(--main-color);color:#fff;border:none;border-radius:4px;font-size:16px;cursor:pointer;margin-top:auto;text-align:center;text-decoration:none;display:block;transition:all 0.3s ease}
+        .buy-btn:hover{background:#176641;box-shadow:0 3px 10px rgba(30,125,84,0.3)}
+        .core-advantage{margin-bottom:80px}
+        .advantage-list{display:flex;flex-wrap:wrap;gap:25px;justify-content:space-between}
+        .advantage-item{width:calc(50% - 12px);background:var(--white);border-radius:8px;box-shadow:var(--shadow);padding:25px 20px}
+        .advantage-item h3{font-size:18px;color:var(--main-color);margin-bottom:12px}
+        .advantage-item p{font-size:14px;color:var(--text-gray);line-height:1.7}
+        .faq{margin-bottom:80px}
+        .faq-list{display:flex;flex-direction:column;gap:18px}
+        .faq-item{background:var(--white);border-radius:8px;box-shadow:var(--shadow);padding:20px 25px}
+        .faq-item h3{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--main-color)}
+        .faq-item p{font-size:14px;color:var(--text-gray);line-height:1.7}
+        .friend-link{margin-bottom:50px}
+        .link-list{background:var(--white);border-radius:8px;box-shadow:var(--shadow);padding:25px 20px;display:flex;flex-wrap:wrap;gap:15px;align-items:center}
+        .link-item{text-decoration:none;color:var(--text-gray);font-size:14px;padding:6px 12px;border-radius:4px}
+        .link-item:hover{background:var(--light-color);color:var(--main-color)}
+        
+        /* 关联页面导航 */
+        .related-pages{margin:60px 0 40px 0;padding:25px;background:var(--white);border-radius:8px;box-shadow:var(--shadow)}
+        .related-pages h2{font-size:20px;color:var(--main-color);margin-bottom:18px;border-bottom:1px solid var(--light-color);padding-bottom:8px}
+        .related-list{display:flex;flex-wrap:wrap;gap:12px}
+        .related-item{padding:6px 18px;background:var(--light-color);color:var(--main-color);border-radius:4px;text-decoration:none;transition:.3s}
+        .related-item:hover{background:var(--main-color);color:white}
+        .related-item.active{background:var(--main-color);color:white}
+
+        @media (max-width:768px){
+            .nav-toggle{display:flex}
+            .sidebar{position:fixed;left:0;top:0;height:100vh;transform:translateX(-100%);transition:.3s}
+            .sidebar.show{transform:translateX(0)}
+            .container{flex-direction:column;gap:0}
+            .main-content{padding:20px 15px;margin-top:60px}
+            .highlight-buy-btn-wrap{margin:20px 0 40px 0;padding:15px 0;}
+            .highlight-buy-btn{padding:15px 35px;font-size:18px;}
+            .account-card{flex:0 0 calc(100% - 20px);min-width:270px}
+            .advantage-item{width:100%}
+            .link-list{justify-content:center}
+            .page-desc h2{font-size:22px}
+            .section-title{font-size:20px!important}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-toggle" id="navToggle"><span></span></div>
+        <aside class="sidebar" id="sidebar">
+            <h1 class="title">纸飞机账号购买</h1>
+            <ul class="nav-list">
+                <li class="active" data-target="page-desc">首页</li>
+                <li data-target="account-list">账号列表</li>
+                <li data-target="core-advantage">核心优势</li>
+                <li data-target="faq">常见问题</li>
+                <li data-target="friend-link">友情链接</li>
+                <li data-target="related-pages">关联页面</li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <section class="page-desc" id="page-desc">
+                <h2>纸飞机账号购买_安全稳定 低价靠谱-简约版</h2>
+                <p>极简风格纸飞机账号购买平台，无冗余设计，专注账号品质，提供全新纸飞机账号、稳定老号、高级会员账号，安全可靠，低价实惠！</p>
+            </section>
+            <div class="highlight-buy-btn-wrap">
+                <a href="https://kkpp.us/" class="highlight-buy-btn" target="_blank">点击进入购买</a>
+            </div>
+            <section class="account-list" id="account-list">
+                <h2 class="section-title">纸飞机账号列表</h2>
+                <div class="scroll-box">
+                    <div class="account-card">
+                        <h3>纸飞机纯净新号</h3>
+                        <p>全新注册，无任何使用记录</p>
+                        <div class="card-tag"><span>全新</span><span>安全</span></div>
+                        <div class="card-price">¥39</div>
+                        <a href="https://kkpp.us/" class="buy-btn" target="_blank">立即选购</a>
+                    </div>
+                    <div class="account-card">
+                        <h3>纸飞机稳定老号</h3>
+                        <p>注册1年+，多重验证，稳定不封号</p>
+                        <div class="card-tag"><span>稳定</span><span>高信誉</span></div>
+                        <div class="card-price">¥89</div>
+                        <a href="https://kkpp.us/" class="buy-btn" target="_blank">立即选购</a>
+                    </div>
+                    <div class="account-card">
+                        <h3>纸飞机会员账号</h3>
+                        <p>会员特权，无广告，全功能体验</p>
+                        <div class="card-tag"><span>会员</span><span>全功能</span></div>
+                        <div class="card-price">¥159</div>
+                        <a href="https://kkpp.us/" class="buy-btn" target="_blank">立即选购</a>
+                    </div>
+                </div>
+            </section>
+            <section class="core-advantage" id="core-advantage">
+                <h2 class="section-title">核心优势</h2>
+                <div class="advantage-list">
+                    <div class="advantage-item">
+                        <h3>极简安全</h3>
+                        <p>无冗余流程，多重验证确保纸飞机账号安全</p>
+                    </div>
+                    <div class="advantage-item">
+                        <h3>极速交付</h3>
+                        <p>支付完成，立即获取账号信息</p>
+                    </div>
+                    <div class="advantage-item">
+                        <h3>低价实惠</h3>
+                        <p>性价比高，同类平台价格更低</p>
+                    </div>
+                    <div class="advantage-item">
+                        <h3>品质保证</h3>
+                        <p>人工审核，杜绝问题账号</p>
+                    </div>
+                </div>
+            </section>
+            <section class="faq" id="faq">
+                <h2 class="section-title">常见问题</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>购买的账号可以使用多久？</h3>
+                        <p>永久使用，30天质保，异常免费更换。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>账号交付方式是怎样的？</h3>
+                        <p>支付完成后，账号信息立即显示并发送至您的联系方式。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>购买后可以退换吗？</h3>
+                        <p>虚拟商品不退换，质量问题30天内免费更换。</p>
+                    </div>
+                </div>
+            </section>
+            <section class="friend-link" id="friend-link">
+                <h2 class="section-title">友情链接</h2>
+                <div class="link-list">
+                    <a href="https://wdd16888.com/" class="link-item" target="_blank">纸飞机账号交易</a>
+                    <a href="https://wdd16888.com/" class="link-item" target="_blank">安全账号中心</a>
+                    <a href="https://wdd16888.com/" class="link-item" target="_blank">账号客服支持</a>
+                </div>
+            </section>
+            <!-- 关联页面导航 -->
+            <section class="related-pages" id="related-pages">
+                <h2>更多纸飞机账号购买专区</h2>
+                <div class="related-list">
+                    <a href="page1.html" class="related-item">商务版（深蓝）</a>
+                    <a href="page2.html" class="related-item active">简约版（墨绿）</a>
+                    <a href="page3.html" class="related-item">活力版（橙红）</a>
+                    <a href="page4.html" class="related-item">轻奢版（紫色）</a>
+                    <a href="page5.html" class="related-item">科技版（青色）</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        function addEvent(el,type,fn){el.addEventListener?el.addEventListener(type,fn):el.attachEvent&&el.attachEvent('on'+type,fn)}
+        function smoothScrollTo(id){var t=document.getElementById(id);t&&t.scrollIntoView({behavior:'smooth',block:'start'})}
+        var navToggle=document.getElementById('navToggle'),sidebar=document.getElementById('sidebar');
+        addEvent(navToggle,'click',function(){sidebar.classList.toggle('show')});
+        var items=document.querySelectorAll('.nav-list li');
+        items.forEach(function(i){addEvent(i,'click',function(){
+            items.forEach(e=>e.classList.remove('active'));
+            this.classList.add('active');
+            smoothScrollTo(this.dataset.target);
+            sidebar.classList.remove('show');
+        })})
+    </script>
+</body>
+</html>

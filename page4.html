@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>纸飞机账号购买_高端稳定纸飞机账号_轻奢纸飞机账号交易平台</title>
+    <meta name="keywords" content="纸飞机账号购买,高端纸飞机账号,稳定纸飞机账号,轻奢纸飞机账号,纸飞机会员账号,企业纸飞机账号">
+    <meta name="description" content="轻奢风格纸飞机账号购买平台，专注高端纸飞机账号交易，提供稳定老号、高级会员账号、企业专属账号，品质保障，专属客服，尊贵体验！">
+    <meta name="robots" content="index,follow">
+    <meta name="applicable-device" content="pc,mobile">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
+        :root{
+            --main-color:#722ed1;/* 紫色主色 */
+            --light-color:#f9f0ff;/* 浅紫辅助色 */
+            --dark-color:#551a8b;/* 深紫 */
+            --text-gray:#666;--white:#fff;
+            --shadow:0 4px 15px rgba(114,46,209,0.1);
+            --highlight-color:#9370db;/* 醒目按钮色 */
+            scroll-behavior:smooth;
+        }
+        body{background:var(--light-color);color:#333;-webkit-tap-highlight-color:transparent}
+        .container{display:flex;min-height:100vh;position:relative}
+        /* 装饰元素 */
+        .decor-top{position:absolute;top:0;right:0;width:300px;height:200px;background:linear-gradient(45deg, var(--main-color), transparent);border-radius:0 0 0 100px;opacity:0.1;z-index:0}
+        .decor-bottom{position:absolute;bottom:0;left:0;width:200px;height:300px;background:linear-gradient(135deg, var(--main-color), transparent);border-radius:0 100px 0 0;opacity:0.1;z-index:0}
+        .nav-toggle{display:none;position:fixed;top:20px;right:20px;width:45px;height:45px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);z-index:1001;align-items:center;justify-content:center}
+        .nav-toggle span{display:block;width:24px;height:2px;background:var(--main-color);position:relative}
+        .nav-toggle span:before,.nav-toggle span:after{content:"";position:absolute;width:24px;height:2px;background:var(--main-color);left:0}
+        .nav-toggle span:before{top:-8px}
+        .nav-toggle span:after{bottom:-8px}
+        .sidebar{width:240px;background:var(--white);box-shadow:var(--shadow);position:sticky;top:0;padding:50px 25px;flex:0 0 240px;display:flex;flex-direction:column;gap:80px;z-index:1000;border-right:1px solid var(--light-color)}
+        .sidebar .title{font-size:22px;font-weight:700;color:var(--main-color);text-align:center;border-bottom:2px solid var(--light-color);padding-bottom:20px;position:relative}
+        .sidebar .title:after{content:"✨";position:absolute;bottom:-10px;right:50%;transform:translateX(50%);background:var(--white);padding:0 10px}
+        .sidebar .nav-list{list-style:none;display:flex;flex-direction:column;gap:30px}
+        .sidebar .nav-list li{padding:15px 20px;border-radius:10px;cursor:pointer;transition:.3s;position:relative;overflow:hidden}
+        .sidebar .nav-list li:before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:var(--main-color);transform:translateX(-100%);transition:.3s}
+        .sidebar .nav-list li.active,.sidebar .nav-list li:hover{background:var(--light-color);color:var(--main-color);font-weight:500}
+        .sidebar .nav-list li.active:before,.sidebar .nav-list li:hover:before{transform:translateX(0)}
+        .main-content{flex:1;padding:60px 80px;overflow-y:auto;position:relative;z-index:1}
+        .page-desc,.account-list,.core-advantage,.faq,.friend-link,.related-pages{scroll-margin-top:20px;position:relative;z-index:1}
+        
+        /* 醒目购买按钮 */
+        .highlight-buy-btn-wrap{
+            width:100%;margin:50px 0 70px 0;
+            display:flex;justify-content:center;align-items:center;
+            padding:25px 0;
+            background:rgba(147, 112, 219, 0.08);
+            border-radius:20px;
+            border:none;
+            box-shadow:var(--shadow);
+        }
+        .highlight-buy-btn{
+            display:inline-block;padding:22px 70px;
+            background:linear-gradient(to right, var(--highlight-color), var(--main-color));
+            color:white;font-size:24px;font-weight:700;
+            border-radius:10px;text-decoration:none;
+            box-shadow:0 8px 20px rgba(114,46,209,0.2);
+            transition:all 0.3s ease;position:relative;overflow:hidden;
+            border:1px solid rgba(255,255,255,0.3);
+        }
+        .highlight-buy-btn:hover{
+            transform:translateY(-5px);
+            box-shadow:0 12px 25px rgba(114,46,209,0.3);
+        }
+        .highlight-buy-btn:after{content:"💎";position:absolute;right:35px;top:50%;transform:translateY(-50%);font-size:20px;transition:all 0.3s ease;}
+        .highlight-buy-btn:hover:after{right:28px;}
+
+        .page-desc{margin-bottom:60px}
+        .page-desc h2{font-size:32px;color:var(--main-color);margin-bottom:20px;font-weight:700;letter-spacing:1px;/* 字间距 */}
+        .page-desc p{font-size:18px;color:var(--text-gray);line-height:1.8}
+        .section-title{font-size:26px;margin-bottom:40px;padding-left:15px;border-left:5px solid var(--main-color);position:relative}
+        .section-title:after{content:"";position:absolute;top:50%;right:0;width:80%;height:1px;background:var(--light-color);transform:translateY(-50%)}
+        .account-list{margin-bottom:80px}
+        .scroll-box{display:flex;overflow-x:auto;gap:35px;padding-bottom:25px;scrollbar-width:none;-ms-overflow-style:none}
+        .scroll-box::-webkit-scrollbar{display:none}
+        .account-card{
+            flex:0 0 300px;background:var(--white);
+            border-radius:20px;
+            box-shadow:var(--shadow);padding:40px 30px;
+            display:flex;flex-direction:column;gap:25px;
+            border:1px solid var(--light-color);
+        }
+        .account-card .card-title{font-size:22px;font-weight:700;color:var(--main-color);border-bottom:1px solid var(--light-color);padding-bottom:15px}
+        .account-card .card-desc{font-size:15px;color:var(--text-gray);line-height:1.7}
+        .account-card .card-tag{display:flex;gap:10px;flex-wrap:wrap}
+        .account-card .card-tag span{font-size:14px;padding:6px 15px;background:var(--light-color);color:var(--main-color);border-radius:20px;font-weight:500}
+        .account-card .card-price{font-size:30px;font-weight:700;color:var(--main-color);margin-top:10px}
+        .buy-btn{width:100%;padding:18px 0;background:var(--main-color);color:#fff;border:none;border-radius:10px;font-size:18px;cursor:pointer;margin-top:auto;text-align:center;text-decoration:none;display:block;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(114,46,209,0.2)}
+        .buy-btn:hover{background:var(--dark-color);box-shadow:0 6px 18px rgba(114,46,209,0.4)}
+        .core-advantage{margin-bottom:80px}
+        .advantage-list{display:flex;flex-wrap:wrap;gap:35px;justify-content:space-between}
+        .advantage-item{width:calc(50% - 17px);background:var(--white);border-radius:20px;box-shadow:var(--shadow);padding:40px 30px;border-top:3px solid var(--main-color)}
+        .advantage-item h3{font-size:20px;color:var(--main-color);margin-bottom:15px;display:flex;align-items:center;gap:10px}
+        .advantage-item h3:before{content:"💎";font-size:18px}
+        .advantage-item p{font-size:15px;color:var(--text-gray);line-height:1.8}
+        .faq{margin-bottom:80px}
+        .faq-list{display:flex;flex-direction:column;gap:25px}
+        .faq-item{background:var(--white);border-radius:20px;box-shadow:var(--shadow);padding:30px 35px}
+        .faq-item h3{font-size:18px;font-weight:700;margin-bottom:12px;color:var(--main-color)}
+        .faq-item p{font-size:15px;color:var(--text-gray);line-height:1.8}
+        .friend-link{margin-bottom:60px}
+        .link-list{background:var(--white);border-radius:20px;box-shadow:var(--shadow);padding:40px 30px;display:flex;flex-wrap:wrap;gap:25px;align-items:center}
+        .link-item{text-decoration:none;color:var(--text-gray);font-size:15px;padding:10px 20px;border-radius:10px;transition:.3s;border:1px solid var(--light-color)}
+        .link-item:hover{background:var(--main-color);color:white;border-color:var(--main-color)}
+        
+        /* 关联页面导航 */
+        .related-pages{margin:70px 0 50px 0;padding:35px;background:var(--white);border-radius:20px;box-shadow:var(--shadow);position:relative}
+        .related-pages h2{font-size:22px;color:var(--main-color);margin-bottom:25px;border-bottom:1px solid var(--light-color);padding-bottom:15px}
+        .related-list{display:flex;flex-wrap:wrap
